@@ -1,10 +1,11 @@
 package org.example;
 
 public class Transport {
-    String name;
-    int capacity;
-    int speed;
-    float costOfKm;
+
+    private String name;
+    private int capacity;
+    private int speed;
+    private float costOfKm;
 
     public Transport(String name, int capacity, int speed, float costOfKm) {
         this.name = name;
@@ -46,7 +47,7 @@ public class Transport {
     }
 
     public float getPrice(City city) {
-        float price = city.distanceKm * costOfKm;
+        float price = city.getDistanceKm() * getCostOfKm();
         return price;
     }
 }
