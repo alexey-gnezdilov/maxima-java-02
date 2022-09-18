@@ -36,7 +36,7 @@ public class City {
         this.distanceKm = distanceKm;
     }
 
-    public boolean isHasAirport() {
+    public boolean hasAirport() {
         return hasAirport;
     }
 
