@@ -1,6 +1,7 @@
 package org.example;
 
 public class City {
+
     private String name;
     private int distanceKm;
     private boolean hasAirport;

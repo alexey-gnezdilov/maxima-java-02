@@ -6,8 +6,6 @@ public class Plane extends Transport{
         super(name, capacity, speed, costOfKm);
     }
 
-
-
     @Override
     public float getPrice(City city) {
         return !city.hasAirport() ? 0 : (float) city.getDistanceKm() * getCostOfKm();
