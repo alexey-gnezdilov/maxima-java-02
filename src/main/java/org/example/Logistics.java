@@ -111,7 +111,9 @@ public class Logistics {
         float min = allPrices[0];
         int minIndex = 0;
         for (int i = 1; i < allPrices.length; i++) {
-            if (allPrices[i] != 0 && allPrices[i] < min) {
+            if (allPrices[i] == 0) {
+                break;
+            } else if (allPrices[i] < min) {
                 minIndex = i;
             }
         }
