@@ -9,6 +9,6 @@ public class App {
         Transport ship = new Ship("ship", 2000, 240, 500.0f);
 
         Logistics log = new Logistics(truck, plane, ship);
-        System.out.println(log.getShipping(irkutsk, 2000, 24));
+        System.out.println(log.getShipping(irkutsk, 20, 24));
     }
 }
