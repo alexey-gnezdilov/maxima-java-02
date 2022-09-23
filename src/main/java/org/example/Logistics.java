@@ -19,7 +19,7 @@ public class Logistics {
         for (Transport vehicle : vehicles) {
             if (isShippingAvailable(city, vehicle, weight, hours)) {
                 if (minCostTransport == null) {
-                    minCostTransport = vehicles[0];
+                    minCostTransport = vehicle;
                 } else if (vehicle.getCostOfKm() < minCostTransport.getCostOfKm()) {
                     minCostTransport = vehicle;
                 }
