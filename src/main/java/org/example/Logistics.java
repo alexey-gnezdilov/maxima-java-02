@@ -16,12 +16,12 @@ public class Logistics {
     //Получить самое оптимальное по стоимости доставки транспортное средство
     public Transport getShipping(City city, int weight, int hours) {
         Transport minCostTransport = null;
-        for (int i = 0; i < vehicles.length; i++) {
-            if (isShippingAvailable(city, vehicles[i], weight, hours)) {
+        for (Transport vehicle : vehicles) {
+            if (isShippingAvailable(city, vehicle, weight, hours)) {
                 if (minCostTransport == null) {
                     minCostTransport = vehicles[0];
-                } else if (vehicles[i].getCostOfKm() < minCostTransport.getCostOfKm()) {
-                    minCostTransport = vehicles[i];
+                } else if (vehicle.getCostOfKm() < minCostTransport.getCostOfKm()) {
+                    minCostTransport = vehicle;
                 }
             }
         }
