@@ -1,11 +1,7 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
 public class App {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         City irkutsk = new City("Irkuts", 250, true, true);
 
         Transport truck = new Truck("truck", 500, 120, 50.0f);
@@ -13,6 +9,6 @@ public class App {
         Transport ship = new Ship("ship", 2000, 240, 500.0f);
 
         Logistics log = new Logistics(truck, plane, ship);
-        System.out.println(log.getShipping(irkutsk, 200, 24));
+        System.out.println(log.getShipping(irkutsk, 2000, 24));
     }
 }
