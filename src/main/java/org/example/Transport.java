@@ -64,4 +64,6 @@ public abstract class Transport implements Repairable{
     public boolean isRepairing() {
         return isRepairing;
     }
+
+    public abstract boolean isCityAvailable(City city);
 }
