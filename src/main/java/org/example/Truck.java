@@ -10,9 +10,4 @@ public class Truck extends Transport{
     public float getPrice(City city) {
         return city.getDistanceKm() * getCostOfKm();
     }
-
-    @Override
-    public boolean isCityAvailable(City city) {
-        return true;
-    }
 }

@@ -7,10 +7,7 @@ public class Logistics {
 
     //Конструктор, принимающий произвольное число паарметров (транспортные средства)
     public Logistics(Transport... transports) {
-        vehicles = new Transport[transports.length];
-        for (int i = 0; i < vehicles.length; i++) {
-            vehicles[i] = transports[i];
-        }
+        vehicles = transports;
     }
 
     //Получить самое оптимальное по стоимости доставки транспортное средство
@@ -31,8 +28,8 @@ public class Logistics {
     //Проверка - доступна ли доставка для транспорта в указанный город
     private boolean isShippingAvailable(City city, Transport transport, int weight, int hours) {
         return !transport.isRepairing()
-                && transport.isCityAvailable(city)
                 && transport.getCapacity() >= weight
-                && (float) city.getDistanceKm() / transport.getSpeed() <= (float) hours;
+                && (float) city.getDistanceKm() / transport.getSpeed() <= (float) hours
+                && transport.getPrice(city) != 0f;
     }
 }
