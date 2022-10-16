@@ -8,6 +8,8 @@ public abstract class Transport implements Repairable{
     private float costOfKm;
     private boolean isRepairing;
 
+    public Transport(){}
+
     public Transport(String name, int capacity, int speed, float costOfKm) {
         this.name = name;
         this.capacity = capacity;
