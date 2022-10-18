@@ -18,17 +18,32 @@ public class TransportFactoryTest {
     }
 
     @Test
-    public void shouldBePlane(){
-        assertTrue(transport instanceof Plane);
+    public void shouldGetSomeTransport(){
+        assertNotNull(transport);
     }
 
     @Test
-    public void shouldBeShip(){
-        assertTrue(transport instanceof Ship);
+    public void shouldBeOnTime(){
+        assertTrue(transport.getSpeed() > 50 / 24);
     }
 
     @Test
-    public void shouldBeTruck(){
-        assertTrue(transport instanceof Truck);
+    public void shouldWeightSuitable(){
+        assertFalse(transport.getCapacity() > 5000);
+    }
+
+    @Test
+    public void shouldNotBeOnRepair(){
+        assertFalse(transport.isRepairing());
+    }
+
+    @Test
+    public void shouldCapacityBe500(){
+        assertEquals(500, TransportFactory.roundCapacity(435));
+    }
+
+    @Test
+    public void shouldSpeedBe90(){
+        assertEquals(90, TransportFactory.roundSpeed(87));
     }
 }
