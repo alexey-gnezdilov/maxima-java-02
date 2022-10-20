@@ -1,49 +1,31 @@
 package org.example;
 
-import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class TransportFactoryTest {
 
     private Transport transport;
+    private City city;
 
-    @Before
-    public void prepare(){
-        transport = TransportFactory.getTransport(
-                new City("Irkutsk", 50, true, true),
-                5000,
-                24);
+    @Test
+    public void isShip(){
+        city = new City("Irkutsk", 50, false, true);
+        transport = TransportFactory.getTransport(city, 5000, 35);
+        assertTrue(transport instanceof Ship);
     }
 
     @Test
-    public void shouldGetSomeTransport(){
-        assertNotNull(transport);
+    public void isPlane(){
+        city = new City("Novosibirsk", 5000, true, false);
+        transport = TransportFactory.getTransport(city, 5000, 40);
+        assertTrue(transport instanceof Plane);
     }
 
     @Test
-    public void shouldBeOnTime(){
-        assertTrue(transport.getSpeed() > 50 / 24);
-    }
-
-    @Test
-    public void shouldWeightSuitable(){
-        assertFalse(transport.getCapacity() > 5000);
-    }
-
-    @Test
-    public void shouldNotBeOnRepair(){
-        assertFalse(transport.isRepairing());
-    }
-
-    @Test
-    public void shouldCapacityBe500(){
-        assertEquals(500, TransportFactory.roundCapacity(435));
-    }
-
-    @Test
-    public void shouldSpeedBe90(){
-        assertEquals(90, TransportFactory.roundSpeed(87));
+    public void isTruck(){
+        city = new City("Moskva", 5000, true, true);
+        transport = TransportFactory.getTransport(city, 5000, 100);
+        assertTrue(transport instanceof Truck);
     }
 }
