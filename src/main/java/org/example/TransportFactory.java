@@ -18,6 +18,7 @@ public class TransportFactory {
         }
     }
 
+
     //Округление грузоподъёмности
     private static int roundCapacity(int capacity) {
         return capacity % 500 == 0 ? capacity : capacity - capacity % 500 + (capacity % 500 == 0 ? 0 : 500);
