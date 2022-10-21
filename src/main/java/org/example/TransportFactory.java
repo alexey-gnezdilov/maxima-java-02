@@ -18,12 +18,10 @@ public class TransportFactory {
         }
     }
 
-
     //Округление грузоподъёмности
     private static int roundCapacity(int capacity) {
         return capacity % 500 == 0 ? capacity : capacity - capacity % 500 + (capacity % 500 == 0 ? 0 : 500);
     }
-
     //Округление скорости
     private static int roundSpeed(int speed) {
         return speed % 10 == 0 ? speed : speed - speed % 10 + (speed % 45 == 0 ? 0 : 10);
