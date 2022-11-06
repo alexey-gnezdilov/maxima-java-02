@@ -1,6 +1,10 @@
 package org.example;
 
-import org.example.model.*;
+import org.example.model.city.City;
+import org.example.model.transport.Plane;
+import org.example.model.transport.Ship;
+import org.example.model.transport.Transport;
+import org.example.model.transport.Truck;
 import org.example.services.TransportFactory;
 import org.junit.Test;
 

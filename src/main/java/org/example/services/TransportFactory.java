@@ -1,8 +1,15 @@
 package org.example.services;
 
-import org.example.model.*;
+import org.example.model.city.City;
+import org.example.model.transport.Plane;
+import org.example.model.transport.Ship;
+import org.example.model.transport.Transport;
+import org.example.model.transport.Truck;
 
 public class TransportFactory {
+
+    //Конструктор по умолчанию
+    public TransportFactory(){}
 
     public static Transport getTransport(City city, int weight, int hours) {
 

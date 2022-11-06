@@ -1,7 +1,7 @@
 package org.example.services;
 
-import org.example.model.City;
-import org.example.model.Transport;
+import org.example.model.city.City;
+import org.example.model.transport.Transport;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +14,9 @@ public class Logistics {
     public void sayHello(){
         System.out.println("Hello logistic!!!");
     }
+
+    //Конструктор по умолчанию
+    public Logistics(){}
 
     //Конструктор, принимающий произвольное число паарметров (транспортные средства)
     public Logistics(Transport... transports) {

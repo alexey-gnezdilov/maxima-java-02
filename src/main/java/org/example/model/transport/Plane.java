@@ -1,4 +1,6 @@
-package org.example.model;
+package org.example.model.transport;
+
+import org.example.model.city.City;
 
 public class Plane extends Transport{
 
