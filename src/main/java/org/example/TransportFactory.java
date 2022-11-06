@@ -31,4 +31,9 @@ public class TransportFactory {
     private static float randomCost() {
         return (float) Math.random() * 100;
     }
+
+    //метод-пустышка
+    public void sayHelloFactory() {
+        System.out.println("Hello Factory");
+    }
 }

@@ -1,9 +1,17 @@
 package org.example;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Logistics {
 
     //свойство - все транспортные средства
     private Transport[] vehicles;
+
+    //метод-пустышка
+    public void sayHello(){
+        System.out.println("Hello logistic!!!");
+    }
 
     //Конструктор, принимающий произвольное число паарметров (транспортные средства)
     public Logistics(Transport... transports) {
