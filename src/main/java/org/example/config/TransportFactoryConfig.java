@@ -1,5 +1,6 @@
-package org.example;
+package org.example.config;
 
+import org.example.TransportFactory;
 import org.springframework.context.annotation.Bean;
 
 public class TransportFactoryConfig {

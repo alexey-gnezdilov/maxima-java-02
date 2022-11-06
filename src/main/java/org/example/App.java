@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.config.LogisticsConfig;
+import org.example.config.TransportFactoryConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
