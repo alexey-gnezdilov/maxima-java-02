@@ -1,6 +1,6 @@
-package org.example.model;
+package org.example.services;
 
-import org.example.*;
+import org.example.model.*;
 
 public class TransportFactory {
 

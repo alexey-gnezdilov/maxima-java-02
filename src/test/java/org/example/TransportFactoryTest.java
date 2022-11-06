@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.model.TransportFactory;
+import org.example.model.*;
+import org.example.services.TransportFactory;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

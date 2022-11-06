@@ -1,6 +1,8 @@
-package org.example;
+package org.example.model;
 
-public abstract class Transport implements Repairable{
+import org.example.Repairable;
+
+public abstract class Transport implements Repairable {
 
     private String name;
     private int capacity; //грузоподъёмность в кг
